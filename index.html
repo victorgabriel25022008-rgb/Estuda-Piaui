@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Estuda Piauí — Seu caminho até o ENEM começa aqui</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f8f5;--card:#fff;--ink:#12281f;--mut:#5b6f64;--line:#dbe6df;--tre:#1f6fd1;--val:#f08a1c;--pal:#14724a;--sun:#f5c518;--acc:var(--tre);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1b15;--card:#15281f;--ink:#e8f2ec;--mut:#9db3a5;--line:#244034}}
+:root[data-theme=dark]{--bg:#0d1b15;--card:#15281f;--ink:#e8f2ec;--mut:#9db3a5;--line:#244034}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.1;margin:0 0 .5rem}
+h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:800}h2{font-size:1.6rem}h3{font-size:1.1rem}
+.mode-v{--acc:var(--val)}
+a{color:inherit}button{font:inherit;cursor:pointer}:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.btn{border:0;border-radius:12px;padding:.75rem 1.2rem;font-weight:600;background:var(--acc);color:#fff}
+.btn.o{background:transparent;color:var(--ink);border:2px solid var(--line)}.btn.sm{padding:.4rem .8rem;font-size:.9rem}
+.top{display:flex;align-items:center;gap:1rem;padding:.9rem 5vw;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.logo{font:800 1.3rem 'Bricolage Grotesque';text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.logo i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--pal) 50%,var(--sun) 50%);display:inline-block}
+.top nav{margin-left:auto;display:flex;gap:1rem;flex-wrap:wrap;align-items:center}.top nav a{text-decoration:none;color:var(--mut)}
+.wrap{max-width:1100px;margin:auto;padding:2rem 5vw}
+.hero{display:grid;gap:2rem;grid-template-columns:1.2fr 1fr;align-items:center;padding:3rem 0}
+.hero p{color:var(--mut);font-size:1.1rem;max-width:52ch}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.2rem}
+.big{font:800 2.2rem 'Bricolage Grotesque'}.mut{color:var(--mut);font-size:.92rem}
+.two{display:grid;gap:1rem;grid-template-columns:1fr 1fr}.two .card{border-top:6px solid var(--tre)}.two .card.v{border-top-color:var(--val)}
+.bar{height:10px;border-radius:9px;background:var(--line);overflow:hidden}.bar b{display:block;height:100%;background:var(--acc);border-radius:9px;transition:width .6s}
+ul.c{padding-left:1.1rem;margin:.5rem 0}ul.c li{margin:.2rem 0}
+.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
+.side{background:var(--card);border-right:1px solid var(--line);padding:1rem;position:sticky;top:0;height:100vh;overflow:auto}
+.side a{display:block;padding:.6rem .8rem;border-radius:10px;text-decoration:none;color:var(--mut);margin:2px 0}
+.side a.on{background:var(--acc);color:#fff}.main{padding:1.5rem 4vw;max-width:1000px}
+.tag{display:inline-block;padding:.15rem .6rem;border-radius:99px;background:var(--acc);color:#fff;font-size:.8rem;font-weight:600}
+.opt{display:block;width:100%;text-align:left;margin:.4rem 0;padding:.7rem;border-radius:10px;border:2px solid var(--line);background:var(--card);color:var(--ink)}
+.opt.ok{border-color:#1a9c5a;background:#1a9c5a22}.opt.no{border-color:#d33;background:#d3333318}
+select,input,textarea{font:inherit;padding:.5rem;border-radius:10px;border:2px solid var(--line);background:var(--card);color:var(--ink);max-width:100%}
+textarea{width:100%;min-height:150px}
+.chart{display:flex;align-items:flex-end;gap:8px;height:140px;padding-top:8px}.chart div{flex:1;background:var(--acc);border-radius:8px 8px 0 0;position:relative;min-height:4px}
+.chart span{position:absolute;top:-18px;left:0;right:0;text-align:center;font-size:.75rem;color:var(--mut)}
+.mob{display:none}
+.chat{max-height:340px;overflow:auto;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.8rem}.chat p{margin:0;padding:.6rem .9rem;border-radius:12px;background:var(--line);max-width:85%}.chat p.me{align-self:flex-end;background:var(--acc);color:#fff}
+@media(max-width:800px){.hero,.two{grid-template-columns:1fr}.app{grid-template-columns:1fr}.side{position:static;height:auto;display:flex;gap:4px;overflow-x:auto;padding:.5rem}.side a{white-space:nowrap}.side .logo{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<div id="root"></div>
+<script>
+const $=s=>document.querySelector(s);
+let S={name:'Estudante',mode:'',pts:0,done:0,ok:0,hours:0,red:0};
+try{Object.assign(S,JSON.parse(localStorage.getItem('ep')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('ep',JSON.stringify(S))}catch(e){}};
+const Q=[
+{a:'Matemática',s:'Porcentagem',d:'Fácil',y:2022,q:'Um produto de R$ 200 recebe desconto de 15%. Qual o preço final?',o:['R$ 170','R$ 185','R$ 30','R$ 215'],r:0,e:'15% de 200 = 30. Preço final = 200 − 30 = 170. Porcentagem é uma fração de denominador 100.'},
+{a:'Matemática',s:'Porcentagem',d:'Média',y:2021,q:'Um valor sobe 20% e depois cai 20%. O resultado final em relação ao inicial é:',o:['Igual','4% menor','4% maior','20% menor'],r:1,e:'Fator 1,2 × 0,8 = 0,96. Aumentos e descontos sucessivos não se anulam, pois incidem sobre bases diferentes.'},
+{a:'Natureza',s:'Ecologia',d:'Fácil',y:2023,q:'Qual processo é responsável por transformar energia luminosa em energia química nas plantas?',o:['Respiração','Fotossíntese','Fermentação','Digestão'],r:1,e:'Na fotossíntese, a clorofila capta luz e produz glicose a partir de CO₂ e água.'},
+{a:'Humanas',s:'Geografia do Brasil',d:'Média',y:2020,q:'O bioma predominante no sul do Piauí, com vegetação de cerrado e caatinga, é típico de qual clima?',o:['Equatorial','Tropical com estação seca','Polar','Temperado'],r:1,e:'O clima tropical semiúmido alterna estação chuvosa e seca, o que molda cerrado e caatinga.'},
+{a:'Linguagens',s:'Interpretação',d:'Média',y:2022,q:'Em um texto argumentativo, a tese é:',o:['O exemplo final','A opinião central defendida','Uma citação aleatória','O título apenas'],r:1,e:'A tese é o ponto de vista que o autor defende e sustenta com argumentos ao longo do texto.'}];
+const AREAS=[['Linguagens',72],['Humanas',65],['Natureza',54],['Matemática',48],['Redação',680/10]];
+const NAV=[['dash','Dashboard'],['plano','Plano de Estudos'],['quest','Questões'],['sim','Simulados'],['red','Redação'],['rev','Revisão Inteligente'],['desemp','Desempenho'],['ia','Assistente de Estudos'],['perfil','Perfil']];
+const bar=p=>`<div class="bar"><b style="width:${p}%"></div>`;
+const days=()=>Math.max(0,Math.ceil((new Date(S.enem||'2026-11-08')-new Date())/864e5));
+const lvl=()=>Math.floor(S.pts/100)+1;
+const acc=()=>S.done?Math.round(S.ok/S.done*100):0;
+
+function topbar(){return `<header class="top"><a class="logo" href="#/"><i></i>Estuda Piauí</a><nav><a href="#/">Início</a><a href="#/como">Como funciona</a><a href="#/perfis">Escolha seu perfil</a><button class="btn sm" onclick="location.hash='#/perfis'">Começar agora</button></nav></header>`}
+function home(){return topbar()+`<main class="wrap"><section class="hero"><div><h1>Seu caminho até o ENEM começa aqui.</h1><p>Organize os estudos, resolva questões com explicação, faça simulados e acompanhe sua evolução, no ritmo do seu momento escolar.</p><div class="cta"><button class="btn" onclick="location.hash='#/perfis'">Começar agora</button><button class="btn o" onclick="document.getElementById('como').scrollIntoView({behavior:'smooth'})">Conhecer a plataforma</button></div></div>
+<div class="card"><h3>Sua semana de exemplo</h3><div class="chart">${[40,55,48,66,72,70,81].map((v,i)=>`<div style="height:${v}%"><span>${v}%</span></div>`).join('')}</div><p class="mut">Percentual de acertos por dia (dados ilustrativos)</p></div></section>
+<section class="grid"><div class="card"><div class="big">+1.200</div><span class="mut">questões com explicação (ilustrativo)</span></div><div class="card"><div class="big">11</div><span class="mut">ferramentas de estudo</span></div><div class="card"><div class="big">+18%</div><span class="mut">evolução média em 8 semanas (ilustrativo)</span></div></section>
+<section id="como" style="padding:3rem 0"><h2>Como funciona</h2><div class="grid"><div class="card"><h3>1. Escolha o perfil</h3><p class="mut">Treineiro para conhecer a prova. ENEM Valendo para preparar a nota de ingresso.</p></div><div class="card"><h3>2. Estude com plano</h3><p class="mut">Cronograma por dia, questões, simulados e redação.</p></div><div class="card"><h3>3. Revise o que errou</h3><p class="mut">A Revisão Inteligente aponta o assunto e propõe treino em três níveis.</p></div></div></section>
+<section><h2>Recursos principais</h2><div class="grid">${['Plano de estudos automático','Banco de questões com explicação','Simulados com cronômetro','Redação com checklist','Revisão Inteligente','Assistente de Estudos'].map(t=>`<div class="card"><h3>${t}</h3></div>`).join('')}</div></section>
+<section style="padding:3rem 0"><h2>Duas modalidades, dois níveis de preparação</h2><div class="two"><div class="card"><span class="tag">Treineiro</span><h3 style="margin-top:.6rem">Conheça. Pratique. Evolua.</h3><ul class="c"><li>Rotina flexível</li><li>Simulados menores</li><li>Pontos, níveis e medalhas</li></ul></div><div class="card v"><span class="tag" style="background:var(--val)">ENEM Valendo</span><h3 style="margin-top:.6rem">Prepare-se. Intensifique. Conquiste.</h3><ul class="c"><li>Cronograma personalizado</li><li>Simulados completos com tempo por área</li><li>Redação, análise de desempenho e revisão</li></ul></div></div></section></main>`}
+function perfis(){return topbar()+`<main class="wrap"><h2>Escolha seu perfil</h2><p class="mut">Você pode mudar de modalidade depois, no Perfil.</p><p><label>Seu nome: <input id="nm" value="${S.name==='Estudante'?'':S.name}" placeholder="Como quer ser chamado?"></label></p><div class="two">
+<div class="card"><span class="tag">Treineiro</span><h3 style="margin-top:.6rem">Conheça. Pratique. Evolua.</h3><p class="mut">Para quem ainda não vai usar o ENEM como principal forma de ingresso e quer conhecer a prova, testar conhecimentos e ganhar experiência.</p><ul class="c"><li>Plano básico e cronograma flexível</li><li>Questões do ENEM e desafios semanais</li><li>Simulados de menor intensidade</li><li>Redações para prática</li><li>Gamificação: pontos, níveis e medalhas</li></ul><button class="btn" onclick="pick('t')">Entrar como Treineiro</button></div>
+<div class="card v"><span class="tag" style="background:var(--val)">ENEM Valendo</span><h3 style="margin-top:.6rem">Prepare-se. Intensifique. Conquiste.</h3><p class="mut">Para quem vai usar a nota do ENEM para ingressar no Ensino Superior.</p><ul class="c"><li>Plano intensivo por data, tempo e dificuldade</li><li>Dashboard completo e contagem regressiva</li><li>Simulados completos com controle de tempo</li><li>Redação, Revisão Inteligente e análise</li><li>Dificuldade que sobe com seu desempenho</li></ul><button class="btn" style="background:var(--val)" onclick="pick('v')">Entrar como ENEM Valendo</button></div></div></main>`}
+function pick(m){const n=$('#nm');if(n&&n.value.trim())S.name=n.value.trim();S.mode=m;save();location.hash='#/app/dash'}
+
+const V=()=>S.mode==='v';
+const P={
+dash(){const c=days();return `<h2>Olá, ${S.name}</h2><p class="mut">${V()?`<b>Faltam ${c} dias para o ENEM.</b> Fase: ${c>120?'construção de base':c>45?'exercícios + revisão':'simulados + pontos fracos'}.`:'Modo Treineiro: sem pressa, o objetivo é conhecer a prova.'}</p>
+<div class="grid"><div class="card"><div class="big">${acc()}%</div><span class="mut">acertos</span></div><div class="card"><div class="big">${S.done}</div><span class="mut">questões resolvidas</span></div><div class="card"><div class="big">${S.hours}h</div><span class="mut">estudadas</span><div><button class="btn sm o" onclick="S.hours++;save();nav()">+1h</button></div></div><div class="card"><div class="big">${S.red}</div><span class="mut">redações</span></div></div>
+<div class="two" style="margin-top:1rem"><div class="card"><h3>Metas da semana</h3>${[['Resolver 20 questões',Math.min(100,S.done*5)],['Estudar 2 horas',Math.min(100,S.hours*50)],['Fazer 1 redação',Math.min(100,S.red*100)]].map(m=>`<p class="mut">${m[0]}</p>${bar(m[1])}`).join('')}</div>
+<div class="card"><h3>Cronograma do dia</h3><ul class="c"><li>Matemática — Porcentagem (40 min)</li><li>Questões de Natureza (30 min)</li><li>${V()?'Redação: repertório (30 min)':'Leitura introdutória (20 min)'}</li></ul></div></div>
+<div class="two" style="margin-top:1rem"><div class="card"><h3>🔴 Precisa de revisão</h3><ul class="c"><li>Porcentagem</li><li>Genética</li></ul></div><div class="card"><h3>🟢 Dominados</h3><ul class="c"><li>Interpretação de texto</li><li>Ecologia</li></ul></div></div>`},
+plano(){const d=days(),h=+(S.h||2);return `<h2>Plano de Estudos</h2><div class="card"><p>${V()?`Data do ENEM: <input type="date" value="${S.enem||'2026-11-08'}" onchange="S.enem=this.value;save();nav()"> Horas por dia: <select onchange="S.h=this.value;save();nav()">${[1,2,3,4,5].map(x=>`<option ${x==h?'selected':''}>${x}</option>`).join('')}</select>`:'Cronograma flexível: escolha 3 dias por semana e comece leve.'}</p></div>
+<div class="card" style="margin-top:1rem"><h3>Distribuição semanal</h3>${[['Linguagens',25],['Humanas',20],['Natureza',20],['Matemática',20],['Redação',15]].map(a=>`<p class="mut" style="margin:.5rem 0 .2rem">${a[0]} — ${V()?Math.round(h*7*a[1]/100*10)/10:Math.round(3*a[1]/100*10)/10}h/semana</p>${bar(a[1]*3)}`).join('')}<p class="mut">Ajustado ${V()?`ao seu tempo diário (${h}h) e às áreas com menor acerto.`:'para uma rotina leve.'}</p></div>`},
+quest(){return `<h2>Questões</h2><p><select id="fa" onchange="qi=0;nav()"><option>Todas</option>${['Matemática','Natureza','Humanas','Linguagens'].map(a=>`<option ${fa==a?'selected':''}>${a}</option>`).join('')}</select></p><div id="qb"></div>`},
+sim(){return V()?`<h2>Simulado completo</h2><div class="card"><p>Tempo total: <b id="tm">05:00:00</b> <span class="mut">(demonstração acelerada: cada segundo vale 1 min)</span></p><p class="mut">Controle por área: Linguagens 1h30 · Humanas 1h · Natureza 1h · Matemática 1h30</p><div id="sb"></div></div>`:`<h2>Mini simulado</h2><div class="card"><p class="mut">5 questões, sem cronômetro obrigatório.</p><div id="sb"></div></div>`},
+red(){return `<h2>Redação</h2><div class="two"><div class="card"><h3>Tema</h3><p>Caminhos para valorizar a educação pública no interior do Nordeste.</p><h3>Estrutura ENEM</h3><ul class="c"><li>Introdução: contexto + tese</li><li>Desenvolvimento 1 e 2: argumento + repertório</li><li>Conclusão: proposta (agente, ação, meio, finalidade, detalhamento)</li></ul></div><div class="card"><h3>Repertórios</h3><ul class="c"><li>Constituição de 1988, art. 205</li><li>Paulo Freire</li><li>Dados do IBGE e do Inep</li></ul></div></div>
+<div class="card" style="margin-top:1rem"><textarea id="tx" placeholder="Escreva sua redação (mínimo 7 linhas)"></textarea><p><button class="btn" onclick="an()">Analisar como estudo</button></p><div id="ar"></div><p class="mut">A análise automática é só uma ferramenta de estudo e não substitui a correção oficial nem a de um professor.</p></div>`},
+rev(){return `<h2>Revisão Inteligente</h2><div class="card"><p>Você errou várias questões de porcentagem.</p><h3>Você precisa revisar: Porcentagem</h3><p class="mut"><b>Resumo:</b> x% de N = N × x/100. Desconto multiplica por (1 − x/100); aumento por (1 + x/100). Variações sucessivas multiplicam os fatores.</p><div class="grid"><div class="card"><b>5 fáceis</b><p class="mut">Cálculo direto de %</p></div><div class="card"><b>5 médias</b><p class="mut">Descontos e acréscimos</p></div><div class="card"><b>5 difíceis</b><p class="mut">Variações sucessivas</p></div></div><p><button class="btn" onclick="fa='Matemática';qi=0;location.hash='#/app/quest'">Começar revisão</button></p><p class="mut">Depois da revisão, o desempenho no assunto é medido de novo.</p></div>`},
+desemp(){return `<h2>Desempenho</h2><div class="card"><h3>Por área</h3>${AREAS.map(a=>`<p class="mut" style="margin:.5rem 0 .2rem">${a[0]}: ${Math.round(a[1])}%</p>${bar(a[1])}`).join('')}</div><div class="card" style="margin-top:1rem"><h3>Evolução semanal</h3><div class="chart">${[45,50,52,58,61,66].map((v,i)=>`<div style="height:${v}%"><span>S${i+1}</span></div>`).join('')}</div></div>`},
+ia(){return `<h2>Assistente de Estudos</h2><div class="card"><div class="chat" id="ch"><p>Oi! Posso explicar conteúdos, sugerir revisão ou montar estratégia. Tente: “explicar porcentagem”.</p></div><input id="ci" placeholder="Pergunte algo" style="width:70%"> <button class="btn" onclick="ask()">Enviar</button><p class="mut">O assistente explica o caminho, não entrega respostas prontas de atividades. (Demonstração com respostas simuladas.)</p></div>`},
+perfil(){const bd=[['🏆 Primeira redação',S.red>0],['📚 100 questões',S.done>=100],['🔥 7 dias estudando',false],['🎯 Primeiro simulado',!!S.sim],['🚀 Evolução',S.done>3]];return `<h2>Perfil</h2><div class="grid"><div class="card"><h3>${S.name}</h3><span class="tag">${V()?'ENEM Valendo':'Treineiro'}</span><p class="mut">Nível ${lvl()} · ${S.pts} pontos</p>${bar(S.pts%100)}<p><button class="btn o sm" onclick="S.mode=V()?'t':'v';save();nav()">Mudar para ${V()?'Treineiro':'ENEM Valendo'}</button></p></div><div class="card"><div class="big">${acc()}%</div><span class="mut">média de acertos · ${S.done} questões · ${S.hours}h · ${S.red} redações</span></div></div><div class="card" style="margin-top:1rem"><h3>Conquistas</h3>${bd.map(b=>`<p style="opacity:${b[1]?1:.4}">${b[0]}</p>`).join('')}${V()?'<p class="mut">Gamificação discreta neste modo.</p>':''}</div>`}};
+let qi=0,fa='Todas',sq=0,sk=null;
+const list=()=>Q.filter(q=>fa==='Todas'||q.a===fa);
+function showQ(id,arr,i,fn){const q=arr[i%arr.length],b=$('#'+id);b.innerHTML=`<div class="card"><span class="mut">${q.a} · ${q.s} · ${q.d} · ${q.y}</span><h3 style="margin-top:.4rem">${q.q}</h3>${q.o.map((o,k)=>`<button class="opt" data-k="${k}">${'ABCD'[k]}) ${o}</button>`).join('')}<div class="ex"></div></div>`;
+b.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{const k=+o.dataset.k;b.querySelectorAll('.opt').forEach((x,j)=>{x.disabled=true;if(j==q.r)x.classList.add('ok')});if(k!=q.r)o.classList.add('no');S.done++;if(k==q.r){S.ok++;S.pts+=V()?5:10}save();b.querySelector('.ex').innerHTML=`<p><b>${k==q.r?'Correto!':'Resposta certa: '+'ABCD'[q.r]}</b> ${q.e}</p><button class="btn sm" id="nx">Próxima</button>`;$('#nx').onclick=fn})}
+function an(){const t=$('#tx').value.trim(),w=t.split(/\s+/).filter(Boolean).length,p=t.split(/\n+/).filter(Boolean).length;const c=[['Mínimo de palavras (150+)',w>=150],['Pelo menos 4 parágrafos',p>=4],['Proposta de intervenção',/proposta|governo|ministério|deve|cabe/i.test(t)],['Conectivos (portanto, além disso)',/portanto|além disso|logo|dessa forma/i.test(t)]];$('#ar').innerHTML=`<p>${w} palavras · ${p} parágrafos</p>${c.map(x=>`<p>${x[1]?'✅':'⬜'} ${x[0]}</p>`).join('')}`;if(w>20){S.red++;S.pts+=20;save()}}
+function ask(){const i=$('#ci'),v=i.value.trim();if(!v)return;const c=$('#ch');let r='Boa pergunta! Diga qual parte você não entendeu e eu explico em passos, com um exemplo.';if(/porcent/i.test(v))r='Porcentagem é uma fração de 100. Para 15% de 200: 200 × 15/100. Tente calcular 30% de 80 e me diga o que encontrou.';else if(/cronograma|organiz/i.test(v))r='Divida por áreas, fixe blocos de 40 min e reserve um dia para revisar erros.';else if(/redaç/i.test(v))r='Comece pela tese, use 1 repertório por parágrafo e feche com proposta completa.';c.innerHTML+=`<p class="me">${v.replace(/</g,'&lt;')}</p><p>${r}</p>`;i.value='';c.scrollTop=9e9}
+function nav(){route()}
+function route(){const h=location.hash.replace('#/','')||'',r=$('#root');document.body.className=V()?'mode-v':'';
+if(h.startsWith('app/')){const k=h.slice(4);if(!S.mode){location.hash='#/perfis';return}
+r.innerHTML=`<div class="app"><aside class="side"><a class="logo" href="#/" style="margin-bottom:1rem"><i></i>Estuda Piauí</a>${NAV.map(n=>`<a href="#/app/${n[0]}" class="${n[0]==k?'on':''}">${n[1]}</a>`).join('')}</aside><main class="main">${(P[k]||P.dash)()}</main></div>`;
+if(k=='quest'){const go=()=>{qi++;showQ('qb',list(),qi,go)};showQ('qb',list(),qi,go)}
+if(k=='sim'){sq=0;const a=V()?Q:Q.slice(0,3);const go=()=>{sq++;if(sq>=a.length){$('#sb').innerHTML=`<h3>Resultado</h3><p>Simulado concluído. Veja Desempenho para a análise.</p>`;S.sim=1;save()}else showQ('sb',a,sq,go)};showQ('sb',a,0,go);if(V()){let s=18000;clearInterval(sk);sk=setInterval(()=>{const t=$('#tm');if(!t){clearInterval(sk);return}s--;t.textContent=[s/3600|0,s/60%60|0,s%60].map(x=>String(x).padStart(2,'0')).join(':')},1000)}}
+}else{r.innerHTML=h=='perfis'?perfis():home();if(h=='como')setTimeout(()=>document.getElementById('como').scrollIntoView(),50)}
+scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+</script></body></html>
